@@ -10,12 +10,18 @@ public class Ball {
 	// public static int count = 0;
 
 //	private static int radius = 0;
-	private static int radius;
+	private static int radius = initClassVariables();
 	private Color defaultColor;
 
-//	using static constructor/initialiser
-	static{
-		radius = 0;
+////	using static constructor/initialiser
+//	static{
+//		radius = 0;
+//	}
+	
+	private static int initClassVariables () {
+		// some computations to determine radius
+		int radius = 5;
+		return radius;
 	}
 	public static int getRedBallCount() {
 		return redBallCount;
