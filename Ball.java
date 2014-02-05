@@ -9,9 +9,14 @@ public class Ball {
 	// modified by code outside the class definition
 	// public static int count = 0;
 
-	private static int radius = 0;
+//	private static int radius = 0;
+	private static int radius;
 	private Color defaultColor;
 
+//	using static constructor/initialiser
+	static{
+		radius = 0;
+	}
 	public static int getRedBallCount() {
 		return redBallCount;
 	}
