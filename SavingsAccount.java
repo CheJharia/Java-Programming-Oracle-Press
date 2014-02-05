@@ -10,7 +10,10 @@ public class SavingsAccount extends BankAccount {
 			int accountNumber, float balance, int id, String type) {
 		super(bankName, accountNumber, balance, id, type);
 		this.interestRate = interestRate;
-		System.out.println("Creating SavingsAccount ...");
+	}
+	
+	public SavingsAccount(String bankName, int accountNumber) {
+		this(5.0f, bankName, accountNumber, 0, 10001, "Bank Account");
 	}
 
 	public void setInterestRate(float interestRate) {
@@ -18,7 +21,7 @@ public class SavingsAccount extends BankAccount {
 	}
 
 	public void printDescription() {
-		System.out.println("A savings account");
+		System.out.println("A saving account:");
 		super.printDescription();
 		System.out.printf("\tInterest rate (%%): %.02f%n", interestRate);
 	}
