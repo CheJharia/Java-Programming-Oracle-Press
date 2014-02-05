@@ -9,20 +9,21 @@ public class Ball {
 	// modified by code outside the class definition
 	// public static int count = 0;
 
-//	private static int radius = 0;
+	// private static int radius = 0;
 	private static int radius = initClassVariables();
 	private Color defaultColor;
 
-////	using static constructor/initialiser
-//	static{
-//		radius = 0;
-//	}
-	
-	private static int initClassVariables () {
+	// // using static constructor/initialiser
+	// static{
+	// radius = 0;
+	// }
+
+	private static int initClassVariables() {
 		// some computations to determine radius
 		int radius = 5;
 		return radius;
 	}
+
 	public static int getRedBallCount() {
 		return redBallCount;
 	}
@@ -65,7 +66,8 @@ public class Ball {
 		} else {
 			strColor = "Green";
 		}
-		System.out.printf("Ball #%d:%-10s velocity set to %.02f%n", count, strColor, v);
+		System.out.printf("Ball #%d:%-10s velocity set to %.02f%n", count,
+				strColor, v);
 	}
 
 }

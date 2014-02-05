@@ -1,5 +1,4 @@
-
-public class HayesModem implements Modem{
+public class HayesModem implements Modem {
 
 	@Override
 	public boolean open() {
@@ -24,6 +23,7 @@ public class HayesModem implements Modem{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 	public static void main(String[] args) {
 		Modem modem = new HayesModem();
 		modem.open();

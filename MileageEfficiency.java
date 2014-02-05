@@ -61,12 +61,11 @@ class HybridVehicle implements ExtendedMileageEfficiency {
 	public float getElectricEfficiency() {
 		return tripCounter / kwPowerConsumed;
 	}
-	
-	public void makeTrip(){
+
+	public void makeTrip() {
 		tripCounter = 100;
 		fuelConsumed = 4.1f;
 		kwPowerConsumed = 3.4f;
 	}
 
 }
-

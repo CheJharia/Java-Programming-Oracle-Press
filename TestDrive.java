@@ -1,8 +1,5 @@
 public class TestDrive {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		GasVehicle gasolineVehicle = new GasVehicle();
 		gasolineVehicle.makeTrip();
