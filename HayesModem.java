@@ -24,5 +24,12 @@ public class HayesModem implements Modem{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+	public static void main(String[] args) {
+		Modem modem = new HayesModem();
+		modem.open();
+		byte[] buffer = null;
+		modem.write(buffer);
+		modem.read();
+		modem.close();
+	}
 }
