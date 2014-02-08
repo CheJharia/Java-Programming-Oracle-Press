@@ -25,6 +25,7 @@ class HybridVehicle implements ExtendedMileageEfficiency, BatteryLifeTracker {
 	public void chargeBattery() {
 		noOfRechargres++;
 	}
+
 	public int getRemainingLife() {
 		return MAX_NUMBER_OF_RECHARGES - noOfRechargres;
 	}
