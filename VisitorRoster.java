@@ -1,7 +1,5 @@
 import java.util.Random;
 
-import org.omg.CORBA.PRIVATE_MEMBER;
-
 public class VisitorRoster {
 	private final int MAX_CAPACITY = 100;
 	private String[] visitors;
@@ -10,7 +8,12 @@ public class VisitorRoster {
 		VisitorRoster roster = new VisitorRoster();
 		roster.init();
 		roster.registerVisitor();
-		roster.printVisitorList();
+		try {
+			roster.printVisitorList();
+		} catch (Exception e) {
+//			e.printStackTrace();
+			System.out.println("Quitting on end of list");
+		}
 	}
 
 	private void init() {
