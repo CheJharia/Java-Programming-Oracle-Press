@@ -1,23 +1,12 @@
 class Outer {
-	private int counter = 0;
+	private int size = 10;
 
 	public class Inner {
-		public void someMethod() {
-			counter++;
+		private int size = 20;
+		public void someMethod(int size) {
+			System.out.println("Method parameter (size): " + size);
+			System.out.println("Inner size: " + this.size);
+			System.out.println("Outer size: " + Outer.this.size);
 		}
-	}
-
-	public int getCount() {
-		return counter;
-	}
-}
-class InnerClassExample{
-	public static void main(String[] args) {
-		Outer outer = new Outer();
-		Outer.Inner inner = outer.new Inner();
-		inner.someMethod();
-		System.out.println("Counter:" + outer.getCount());
-		inner.someMethod();
-		System.out.println("Counter:" + outer.getCount());
 	}
 }
