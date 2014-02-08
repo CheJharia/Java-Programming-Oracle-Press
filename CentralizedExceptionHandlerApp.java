@@ -7,7 +7,17 @@ public class CentralizedExceptionHandlerApp {
 	private static BufferedReader reader = null;
 
 	public static void main(String[] args) {
-
+		String urlStr = null;
+		try {
+			CentralizedExceptionHandlerApp app = new CentralizedExceptionHandlerApp();
+			app.openDataFile("src.txt");
+			app.readData();
+			reader.close();
+		} catch (IOException e) {
+			System.out.println("Error closing file");
+		} catch (Exception e) {
+			System.out.println("Unknown error :" + e.getMessage());
+		}
 	}
 
 	void openDataFile(String fileName) {
