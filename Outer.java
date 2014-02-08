@@ -5,6 +5,8 @@ class Outer {
 	class Inner {
 		private int size = 20;
 
+		// an inner class can access the formal parameter only if it is declared
+		// final
 		public void someMethod(int size, final int b) {
 			System.out.println("Method parameter (size): " + size);
 			System.out.println("Inner size: " + this.size);
