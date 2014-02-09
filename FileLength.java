@@ -18,6 +18,7 @@ public class FileLength {
 		}
 		try {
 			streamReader = new FileInputStream(args[0]);
+			// read one byte at a time
 			while (streamReader.read() != -1) {
 				count++;
 			}
@@ -30,6 +31,8 @@ public class FileLength {
 			System.out.println("Error reading file");
 		} finally {
 			try {
+				// this does not guarantee file closure,
+				// it is just attempt
 				streamReader.close();
 			} catch (Exception e) {
 				e.printStackTrace();
