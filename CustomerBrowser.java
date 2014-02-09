@@ -9,6 +9,7 @@ public class CustomerBrowser {
 			app.makeConnection();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+		
 		}
 	}
 
