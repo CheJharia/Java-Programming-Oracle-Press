@@ -1,15 +1,18 @@
+import java.io.Serializable;
 
-public class Student {
-	
-	// act as a 'blank' final variable
-	public final int ID;
-	
-	public Student() {
-		ID = createID();
+public class Student implements Serializable {
+	private String firstName;
+	private String lastName;
+	private int id;
+
+	public Student(int id,String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.id = id;
 	}
-	
-	// compute ID for the student
-	private int createID() {
-		return 1;
+
+	public String toString() {
+		return ("ID:" + id + " " + firstName + " " + lastName);
 	}
+
 }
