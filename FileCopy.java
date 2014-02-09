@@ -11,19 +11,24 @@ public class FileCopy {
 		int numberRead = 0;
 		InputStream readerStream = null;
 		OutputStream writerStream = null;
-		
-		byte buffer[] = new byte[512];
+
+		// buffers are typically allocated in multiples of 512
+		byte[] buffer = new byte[512];
 		if (args.length < 2) {
 			System.out.println("Usage: java FileCopy inputfile outputfile");
 			System.exit(0);
 		}
 		try {
+			// open an input stream on the file specified by
+			// the first argument of the command line
 			readerStream = new FileInputStream(args[0]);
 		} catch (FileNotFoundException fe) {
 			System.out.println(args[0] + " not found");
 			System.exit(0);
 		}
 		try {
+			// open an output stream on the file specified by
+			// the second argument of the command line
 			writerStream = new FileOutputStream(args[1]);
 		} catch (FileNotFoundException e) {
 			System.out.println(args[1] + " not found");
@@ -34,7 +39,7 @@ public class FileCopy {
 			}
 		} catch (IOException ioe) {
 			System.out.println("Error reading/writing file");
-		} finally{
+		} finally {
 			try {
 				readerStream.close();
 				writerStream.close();
