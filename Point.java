@@ -77,5 +77,6 @@ class ColorPoint extends Point implements Serializable {
 	public String toString() {
 		return "Point{" + "x=" + x + " y=" + y + "}" + " ColorPoint{"
 				+ "color=" + color + "}";
+				
 	}
 }
