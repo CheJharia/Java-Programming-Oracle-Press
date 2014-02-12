@@ -24,8 +24,9 @@ public class CharWrapper {
 		System.out.println("No of lower case letters: " + lcCount);
 		System.out.println("No of upper case letters: " + ucCount);
 		System.out.println("No of white space characters: " + wsCount);
-		System.out.println("Total =" + (digitCount + letterCount + lcCount
-				+ ucCount + wsCount));
+		System.out.println("Total ="
+				+ (digitCount + letterCount + lcCount + ucCount + wsCount));
+		
 	}
 
 }
