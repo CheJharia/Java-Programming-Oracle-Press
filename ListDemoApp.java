@@ -43,7 +43,12 @@ class MyFrame3 extends JFrame implements ActionListener {
 		sourceModel = new DefaultListModel();
 		sourceModel.addElement("Banana");
 		sourceModel.addElement("Apple");
-		sourceModel.addElement("Mango");
+		sourceModel.addElement("Rambutan");
+		sourceModel.addElement("Durian");
+		sourceModel.addElement("Orange");
+		sourceModel.addElement("Blueberry");
+		sourceModel.addElement("Pineapple");
+		
 		source = new JList(sourceModel);
 
 		source.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
