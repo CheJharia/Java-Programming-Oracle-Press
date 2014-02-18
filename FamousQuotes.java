@@ -32,7 +32,7 @@ public class FamousQuotes {
 	}
 
 	private void buildList() {
-		listOfFamousQuotes = new ArrayList<>();
+		listOfFamousQuotes = new ArrayList();
 		listOfFamousQuotes
 				.add("Where there is love there is life - Mahatma Gandhi");
 		listOfFamousQuotes
